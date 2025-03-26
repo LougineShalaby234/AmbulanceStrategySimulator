@@ -184,7 +184,7 @@ VALHALLA_API_URL=http://your-valhalla-instance/route
 
   2. Set the Routing Method
 
-The simulator has a parameter called ROUTING_METHOD , set it to the desired options ["LinearInterpolation","Here","Google","Valhalla","Openrouteservice"]
+The simulator has a parameter called ROUTING_METHOD , set it to the desired option ["LinearInterpolation","Here","Google","Valhalla","Openrouteservice"]
 
  And **You are good to go**  ,routing functions are already implemented
 
