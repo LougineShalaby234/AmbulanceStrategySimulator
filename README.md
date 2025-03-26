@@ -116,8 +116,8 @@ Assigns an ambulance to an emergency.
   - The emergency must have status `waiting_for_assignment`.
   - The ambulance must not be broken and must be idle or relocating.
 - **Effect:**
-  - The ambulance is marked as en route to the emergency.
-  - The emergency status changes to `waiting_for_ambulance`.
+  - Ambulance status → “on the way to emergency.”
+  - Emergency status → “waiting_for_ambulance.”
   - The estimated arrival time is computed.
 
 ### 2. `SendAmbulanceToHospital`
@@ -157,33 +157,24 @@ Redirects an ambulance to a new hospital if the current one is full.
 
 The agent can issue any combination of the above decisions at each step, but the simulator enforces constraints to ensure logical consistency. Invalid decisions are ignored. The environment then progresses by one minute before calling the agent again.
 
+---
+
+## Additional Statuses and Notes
+1. `AMBULANCE_STATUS_AT_EMERGENCY` :
+
+After reaching the emergency, an ambulance remains on-scene for a random number of minutes (e.g. 2–10). During this period, the agent cannot send it anywhere. Once on‐scene time finishes, the agent can call SendAmbulanceToHospital (if the patient needs transport) or do nothing (if no transport is required).
+
+2. `AMBULANCE_STATUS_BEING_CLEANED` :
+   
+After delivering a patient to the hospital, an ambulance transitions into “being cleaned” for a random time interval (e.g., 2–5 minutes). It cannot be sent anywhere until it becomes idle again.
+
+3. `No Transport` :
+   
+In some cases, the simulation may decide that the patient doesn’t require hospital transport (either minor treatment on scene or patient deceased). The environment will mark the emergency as finished and free up the ambulance automatically.
+
+4. `Random Delays`:
+   
+Each minute en route, an ambulance might experience a 1-minute delay with some probability (e.g. PROB_DELAY). That means it effectively doesn’t move that minute.
 
 
 ---
-## Todo
-
-- [x] Implement random time delays for ambulances.
-- [x] Fix API calls and routing (here maps, google maps, open source alternatives).
-- [x] Add NYC emergency call data for multiple days.
-- [x] Add a proper NYC map.
-- [x] When running the simulator with a specific map, only the the correct call files should be used (based on their naming).
-- [x] Add a better Results figure and better main figure (with routes)
-- [x] Allow scenarios where emergencies may not require hospital transport (e.g., non-critical cases, deceased patients).
-- [x] Use a (python) script that calls `renderer.py` automatically to iterate over all files in a single function call (use os.system() or what ever).
-- [x] Refactor code so that hyper-parameters are properly defind in the beginning (e.g., probability of random delay for an ambulance)
-- [x] Add proper command line arguments for the simulator.
-- [x] Add tests: Add a `tests` folder and use pytest to test basic functionality (add more checks and more assertions and raise more errors first)
-- [x] 3rd agent that combines the nearest heuristic with intelligent relocations to optimize coverage
-- [x] Add more edge cases (e.g., emergency happening far away from a road)
-- [x] Add a new ambulance status "being cleaned". After delivering a patient, the ambulance remains in "being cleaned" for a random time interval.
-- [x] AMBULANCE_STATUS_AT_EMERGENCY should also be the state for a few minutes (randomly between 1 and 10 or so) which would be more realistic
-- [ ] Add better documentation, update archive_example_output folder
-- [x] check this out : https://github.com/gboeing/osmnx
-- [x] Add a new result and main figure. Result figure with 3 agents and multiple scenarios. Much larger text. And more simplification (e.g., "Time From Call to Admission"). Main figure should have less clutter. and pink colour to be changed as it is not clearly visible 
-- [x] Create and upload a .gif file to the readme (animated version of the left (map) part of the main figure)
-- [ ] Create a (clean) public version of this repo (should not contain any history of this repo) + add your folium problem to the troubleshooting section
-- [ ] for the public github: Add a link to google colab from the readme, so that people can run the simulator in Google Colab (you can install the packags and then clone this repo from within colab)
-- [ ] Add a new map for all of RLP (see red cross channel for how large it should be) and generate fake call data.
-- [ ] 🎉 Milestone 4 🎉
-- [ ] Start writing a proper paper (e.g., _Simulation Modelling Practice and Theory_ or https://joss.theoj.org/) and start working with real RLP data.
-- [ ] check this out and add refrences if found : **Gerrit - Intensity Kernels and  Mouad - STPP Inference**
