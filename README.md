@@ -158,6 +158,37 @@ Redirects an ambulance to a new hospital if the current one is full.
 The agent can issue any combination of the above decisions at each step, but the simulator enforces constraints to ensure logical consistency. Invalid decisions are ignored. The environment then progresses by one minute before calling the agent again.
 
 ---
+## Routing Options
+By **default**, the simulator uses **linear interpolation** to estimate ambulance travel times. This means it calculates the straight-line distance (Haversine) between two points, then applies an average speed to approximate the route. **No external API** is needed for this default mode.
+
+However, if you want more realistic routing (accounting for roads, turn restrictions, traffic, etc.), you can enable one of the supported APIs:
+
+**1. Google Maps**
+
+**2. HERE Maps**
+
+**3. Valhalla**
+
+**4. OpenRouteService**
+
+
+**How to Use an External Routing Service**
+   1. Edit .env File :
+   
+   ```bash
+HERE_MAPS_API_KEY=XXX
+GOOGLE_MAPS_API_KEY=XXX
+OPENROUTESERVICE_API_KEY=XXX
+VALHALLA_API_URL=http://your-valhalla-instance/route
+ ```
+
+  2. Set the Routing Method
+
+The simulator has a parameter called ROUTING_METHOD , set it to the desired options ["LinearInterpolation","Here","Google","Valhalla","Openrouteservice"]
+
+ And **You are good to go**  ,routing functions are already implemented
+
+---
 
 ## Additional Statuses and Notes
 1. `AMBULANCE_STATUS_AT_EMERGENCY` :
