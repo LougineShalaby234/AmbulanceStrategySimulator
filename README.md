@@ -117,6 +117,9 @@ Emergency response strategies are evaluated by the average time from emergency c
 
 ```bash
 AmbulanceStrategySimulator/
+├── .github/
+│   ├── workflows
+│       └── python-tests.yml
 ├── agents/
 │   ├── agent_nearest.py
 │   ├── agent_nearest_int_reloc.py
