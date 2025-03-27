@@ -111,7 +111,29 @@ Emergency response strategies are evaluated by the average time from emergency c
 <img src="final_results.jpg" alt="Map" width="600"/>
 
 ---
+## Project Structure 
 
+```bash
+AmbulanceStrategySimulator/
+├── agents/
+│   ├── agent_nearest.py
+│   ├── agent_nearest_int_reloc.py
+│   ├── agent_random.py
+│   ├── base_class.py
+├── input/
+├── tests/
+│   └── test_simulator.py
+├── .env
+├── .gitignore
+├── environment.yml
+├── final_visualization.py
+├── README.md
+├── render.py
+├── render_all.py
+├── simulator.py
+└── translate_log_to_visual.py
+```
+---
 ## Building Your Own Agent
 
 After each full minute, the simulator calls the agent and provides the current state of the whole environment. The agent then returns a (potentially empty) list of decisions that it wants to make. The simulator then checks each decision to ensure it is valid (e.g., you cannot send a broken ambulance to an emergency) and applies it to the environment. After that, the environment is rolled out for another minute.
