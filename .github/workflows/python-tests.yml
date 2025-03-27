@@ -18,7 +18,7 @@ jobs:
           auto-activate-base: false
 
       - name: Run tests with pytest
+        shell: bash -l {0}  # <== This is what lets conda activate work!
         run: |
-          conda info
-          conda list
-          PYTHONPATH=. pytest
+          conda activate AmbulanceGameEnv
+          PYTHONPATH=. python -m pytest
