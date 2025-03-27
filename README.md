@@ -105,7 +105,8 @@ Emergency response strategies are evaluated by the average time from emergency c
 ## 🚑 Ambulance Simulator: Interactive Environment Runner (Google Colab) :
 This notebook sets up all dependencies, clones the GitHub repository, and runs the Ambulance Simulator environment — all in Google Colab, **with no local installation required.**
 
-[![Open In Colab] : https://colab.research.google.com/drive/1aZzcwE_nUXQaUYjbPbfKye0WDnhytiL9?authuser=0#scrollTo=krHqanTtY9HE
+[![Open In Colab] (https://colab.research.google.com/github/LougineShalaby234/AmbulanceStrategySimulator/blob/main/AmbulanceColabRunner.ipynb)
+
 
 ---
 
