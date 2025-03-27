@@ -99,6 +99,8 @@ The environment `ambulance_game_env` should appear in the list. If it's missing,
 ---
 ## Testing 
 
+![Tests](https://github.com/LougineShalaby234/AmbulanceStrategySimulator/actions/workflows/python-tests.yml/badge.svg)
+
 For testing, run:
 ```bash
 python -m pytest
