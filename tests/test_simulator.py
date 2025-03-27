@@ -6,7 +6,7 @@ import sys
 from datetime import datetime, timedelta
 sys.path.insert(0, os.path.abspath('..'))
 
-from AmbulanceGame.simulator import (
+from AmbulanceStrategySimulator.simulator import (
     parse_time_str,
     read_map,
     load_scenario,
