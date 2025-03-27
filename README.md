@@ -102,6 +102,13 @@ Emergency response strategies are evaluated by the average time from emergency c
 <img src="final_results.jpg" alt="Map" width="600"/>
 
 ---
+## 🚑 Ambulance Simulator: Interactive Environment Runner (Google Colab) :
+This notebook sets up all dependencies, clones the GitHub repository, and runs the Ambulance Simulator environment — all in Google Colab, with no local installation required.
+
+[![Open In Colab] : https://colab.research.google.com/drive/1aZzcwE_nUXQaUYjbPbfKye0WDnhytiL9?authuser=0#scrollTo=krHqanTtY9HE
+
+---
+
 ## Building Your Own Agent
 
 After each full minute, the simulator calls the agent and provides the current state of the whole environment. The agent then returns a (potentially empty) list of decisions that it wants to make. The simulator then checks each decision to ensure it is valid (e.g., you cannot send a broken ambulance to an emergency) and applies it to the environment. After that, the environment is rolled out for another minute.
