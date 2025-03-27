@@ -61,7 +61,7 @@ HERE_MAPS_API_KEY = os.getenv('HERE_MAPS_API_KEY')
 #---------
 # hyperparameters
 #---------
-ROUTING_METHOD = "Here" # which routing method to be used
+ROUTING_METHOD = "LinearInterpolation" # which routing method to be used
 assert ROUTING_METHOD in ["Google", "Here", "Openrouteservice", "LinearInterpolation", "Valhalla"]
 PROB_NO_TRANSPORT = 0.3 # how often emergencies will not need to be transported to a hospital
 PROB_DELAY = 0.01 # how often an ambulance encounter a 1 minute random delay while moving forward
@@ -954,7 +954,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--map", default="input/map_kaiserslautern.json", help="Path to map JSON")
     parser.add_argument("--scenario", help="Path to scenario JSON or pattern (inferred from map if not provided)")
-    parser.add_argument("--agent", default="agents/agent_random.py", help="Path to agent file pattern")
+    parser.add_argument("--agent", default="agents/agent_*.py", help="Path to agent file pattern")
     parser.add_argument("--outfolder", default="output", help="Output folder for logs/results")
     parser.add_argument("--num-exp", type=int, default=3, help="Number of experiments to run")
     parser.add_argument("--result-filename", default="final_results.csv", help="CSV file to save results")
