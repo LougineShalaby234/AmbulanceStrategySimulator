@@ -5,6 +5,15 @@
 This document explains how to set up and run the Ambulance Game Simulator, a single-player simulation in which a Python-based agent dispatches ambulances. The simulator includes ready-to-use maps for New York City and the German city of Kaiserslautern.
 
 ---
+
+## 🚑 Ambulance Simulator: Interactive Environment Runner (Google Colab) :
+This notebook sets up all dependencies, clones the GitHub repository, and runs the Ambulance Simulator environment — all in Google Colab, **with no local installation required.**
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LougineShalaby234/AmbulanceStrategySimulator/blob/main/AmbulanceColabRunner.ipynb)
+
+
+---
+
 ## Animated View
 
 <img src="simulation.gif" alt="Map" width="600"/>
@@ -100,13 +109,6 @@ python -m pytest
 Emergency response strategies are evaluated by the average time from emergency call to hospital arrival
 
 <img src="final_results.jpg" alt="Map" width="600"/>
-
----
-## 🚑 Ambulance Simulator: Interactive Environment Runner (Google Colab) :
-This notebook sets up all dependencies, clones the GitHub repository, and runs the Ambulance Simulator environment — all in Google Colab, **with no local installation required.**
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LougineShalaby234/AmbulanceStrategySimulator/blob/main/AmbulanceColabRunner.ipynb)
-
 
 ---
 
