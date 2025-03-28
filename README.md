@@ -108,6 +108,10 @@ python -m pytest
 ```
 ---
 
+## Codecov :
+[![codecov](https://codecov.io/gh/LougineShalaby234/AmbulanceStrategySimulator/branch/main/graph/badge.svg)](https://codecov.io/gh/LougineShalaby234/AmbulanceStrategySimulator)
+
+
 ## Results
 Emergency response strategies are evaluated by the average time from emergency call to hospital arrival
 
