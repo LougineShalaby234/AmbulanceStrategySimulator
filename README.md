@@ -1,4 +1,4 @@
-# #                                                  Ambulance Game Simulator
+#                                                      Ambulance Game Simulator
 [![Tests](https://github.com/LougineShalaby234/AmbulanceStrategySimulator/actions/workflows/python-tests.yml/badge.svg)](https://github.com/LougineShalaby234/AmbulanceStrategySimulator/actions/workflows/python-tests.yml)   
 [![codecov](https://codecov.io/gh/LougineShalaby234/AmbulanceStrategySimulator/branch/main/graph/badge.svg)](https://codecov.io/gh/LougineShalaby234/AmbulanceStrategySimulator)
 
