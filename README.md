@@ -1,4 +1,6 @@
-# Ambulance Game Simulator
+# #                                                  Ambulance Game Simulator
+[![Tests](https://github.com/LougineShalaby234/AmbulanceStrategySimulator/actions/workflows/python-tests.yml/badge.svg)](https://github.com/LougineShalaby234/AmbulanceStrategySimulator/actions/workflows/python-tests.yml)   
+[![codecov](https://codecov.io/gh/LougineShalaby234/AmbulanceStrategySimulator/branch/main/graph/badge.svg)](https://codecov.io/gh/LougineShalaby234/AmbulanceStrategySimulator)
 
 <img src="map.jpg" alt="Map" width="600"/>
 
@@ -99,17 +101,15 @@ The environment `ambulance_game_env` should appear in the list. If it's missing,
 ---
 ## Testing 
 
-[![Tests](https://github.com/LougineShalaby234/AmbulanceStrategySimulator/actions/workflows/python-tests.yml/badge.svg)](https://github.com/LougineShalaby234/AmbulanceStrategySimulator/actions/workflows/python-tests.yml)
+
 
 
 For testing, run:
 ```bash
 python -m pytest
 ```
----
 
-## Codecov :
-[![codecov](https://codecov.io/gh/LougineShalaby234/AmbulanceStrategySimulator/branch/main/graph/badge.svg)](https://codecov.io/gh/LougineShalaby234/AmbulanceStrategySimulator)
+---
 
 
 ## Results
