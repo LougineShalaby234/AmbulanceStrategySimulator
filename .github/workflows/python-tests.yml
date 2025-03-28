@@ -21,4 +21,5 @@ jobs:
         shell: bash -l {0}  # <== This is what lets conda activate work!
         run: |
           conda activate AmbulanceGameEnv
-          PYTHONPATH=. python -m pytest
+          pip install pytest-cov codecov
+          PYTHONPATH=. pytest --cov=. --cov-report=xml
